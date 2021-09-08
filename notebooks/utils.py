@@ -60,10 +60,10 @@ def plot_cm(labels, predictions, p=0.5):
     """
     cm = confusion_matrix(labels, predictions > p)
     plt.figure(figsize=(5,5))
-    sns.heatmap(cm, annot=True, fmt="d")
-    plt.title('Confusion matrix @{:.2f}'.format(p))
-    plt.ylabel('Actual label')
-    plt.xlabel('Predicted label')
+    sns.heatmap(cm, annot=True, fmt="d", cmap='YlGnBu', cbar=False)
+    plt.title('Matriz de Confusión'.format(p))
+    plt.ylabel('Real')
+    plt.xlabel('Predicción')
     
 
 def eval_model(training, model, test_X, test_y, field_name):
