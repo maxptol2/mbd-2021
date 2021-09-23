@@ -82,6 +82,7 @@ def read_data():
 
 def Gra_bar(data, attribute) :
     plt.figure(figsize=(20,8))
+    plt.tick_params(labelsize=23)
     data[attribute].value_counts().plot(kind = 'bar')
     plt.ylabel('Count')
     plt.title(attribute)
